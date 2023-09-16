@@ -1,0 +1,47 @@
+<br>
+<mat-card style="padding: 20px;" *ngIf = "user">
+
+    <h1>Your Profile Details</h1>
+    <mat-card-content>
+      <div class="bootstrap-wrapper">
+        <div class="container">
+          <div class="container text-center">
+            <img src="https://t4.ftcdn.net/jpg/03/46/93/61/360_F_346936114_RaxE6OQogebgAWTalE1myseY1Hbb5qPM.jpg"
+            alt="Profile" class="profile-image">
+            <h1 class="mt20">{{user.firstName}} {{user.lastName}}</h1>
+          </div>
+          <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <table class="table text-center">
+                <tr>
+                  <td><strong>Username</strong></td>
+                  <td>{{ user.username }}</td>
+                </tr>
+                <tr>
+                  <td><strong>UserId</strong></td>
+                  <td>EXAM{{user.id}}</td>
+                </tr>
+                <tr>
+                  <td><strong>Phone</strong></td>
+                  <td>{{user.phone}}</td>
+                </tr>
+                <tr>
+                  <td><strong>Role</strong></td>
+                  <td>{{user.authorities[0].authority}}</td>
+                </tr>
+                <tr>
+                  <td><strong>Status</strong></td>
+                  <td>{{user.enabled?"ACTIVE":"NOT ACTIVE"}}</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions style="display: block;margin-left: auto;margin-right: auto;">
+      <button mat-raised-button color="primary" >UPDATE</button>&nbsp;&nbsp;
+      <button mat-raised-button color="basic" >DELETE</button>
+    </mat-card-actions>
+
+</mat-card>

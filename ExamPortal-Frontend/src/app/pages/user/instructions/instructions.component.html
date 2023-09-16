@@ -1,0 +1,57 @@
+<br>
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <mat-card class="container">
+          <mat-card-header>
+            <mat-card-title>Read the instructions carefully</mat-card-title>
+            <mat-card-subtitle>One step more to go</mat-card-subtitle>
+          </mat-card-header><br>
+          <mat-divider></mat-divider>
+          <br>
+          <mat-card-content>
+            <h2 matCardTitle>{{ quiz.title }}</h2>
+            {{ quiz.description }}
+          </mat-card-content>
+          <br>
+          <mat-divider></mat-divider>
+          <br>
+          <mat-card-content>
+            <h1>Important Instructions:</h1>
+            <ul>
+              <li>You must use a functioning webcam and microphone.</li>
+              <li>No cell phones or other secondary devices in the room or test area.</li>
+              <li>Your desk/table must be clear or any materials except your test-taking device.</li>
+              <li>The testing room must be well-lit and you must be clearly visible.</li>
+              <li>No dual screens/monitors.</li>
+              <li>You have to submit the exam within <b>{{quiz.numberOfQuestions*2}} minutes.</b></li>
+              <li>There are <b>{{quiz.numberOfQuestions}} questions</b> to attempt.</li>
+              <li>Each questions carry <b>{{quiz.maxMarks / quiz.numberOfQuestions}} marks.</b> No negative for wrong one.</li>
+              <li>All questions is of MCQs type.</li>
+            </ul>
+          </mat-card-content>
+          <br>
+          <mat-divider></mat-divider>
+          <br>
+          <mat-card-content>
+            <h1>Attempting Exam</h1>
+            <ul>
+              <li>Click <b>Start Exam</b> button to start the exam.</li>
+              <li>You can resume the exam if interrupted due to any reason</li>
+              <li>Click on next button to move next questions</li>
+              <li>Click on <b>Submit Exam</b> to submit the exam</li>
+              <li>Result of the exam is auto-generated in PDF form</li>
+            </ul>
+          </mat-card-content>
+          <br>
+          <mat-card-actions style="display: block;margin-left: auto;margin-right: auto;">
+            <button mat-raised-button color="primary" (click)="startQuiz()">Start Exam</button>
+          </mat-card-actions>
+          <br>
+        </mat-card>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
